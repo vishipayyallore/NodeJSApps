@@ -2,11 +2,11 @@
 
 var express = require('express');
 
-var app = express.createServer();
+var app = express();
 
 var products = `
 { "products": [{ "name": "Pen", "price": 10.23 }, 
-{ "name": "Books of Ranga", "price": 12.85 }] }
+{ "name": "Books", "price": 12.85 }] }
 `;
 
 app.get('/expressdemo/api', function(req, res){
