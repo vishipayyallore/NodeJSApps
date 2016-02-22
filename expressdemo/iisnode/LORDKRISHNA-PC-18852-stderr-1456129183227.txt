@@ -1,0 +1,12 @@
+Application has thrown an uncaught exception and is terminated:
+TypeError: express.createServer is not a function
+    at Object.<anonymous> (A:\LordKrishna\Samples_Github\NodeJSApps\expressdemo\hello.js:3:19)
+    at Module._compile (module.js:410:26)
+    at Object.Module._extensions..js (module.js:417:10)
+    at Module.load (module.js:344:32)
+    at Function.Module._load (module.js:301:12)
+    at Module.require (module.js:354:17)
+    at require (internal/module.js:12:17)
+    at Object.<anonymous> (C:\Program Files\iisnode\interceptor.js:210:1)
+    at Module._compile (module.js:410:26)
+    at Object.Module._extensions..js (module.js:417:10)
