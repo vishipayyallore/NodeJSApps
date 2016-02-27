@@ -6,11 +6,13 @@ function Employee(firstName, lastName){
 
 Employee.prototype = {
     getFirstName: function(){
-        console.log('First Name: ' + this.firstName);
+        var startingMessage = 'Employee::First Name: ';
+        console.log( startingMessage.concat(this.firstName) );
     },
     
     getFullName: function(){
-        console.log( 'User::getFullName -> ' + this.firstName + ' ' + this.lastName);
+        var startingMessage = 'Employee::getFullName -> ';
+        console.log( startingMessage.concat(this.firstName, ' ', this.lastName) );
     }
 };
 
@@ -20,11 +22,13 @@ function User(firstName, lastName){
     this.lastName = lastName;
     
     this.getFirstName = function(){
-        console.log('First Name: ' + firstName);
+        var startingMessage = 'User::First Name: ';
+        console.log( startingMessage.concat(firstName) );
     };
     
     this.getFullName = function(){
-        console.log( 'User::getFullName -> ' + firstName + ' ' + lastName);
+        var startingMessage = 'User::getFullName -> ';
+        console.log( startingMessage.concat(firstName, ' ', lastName) );
     };
     
     return{
@@ -40,7 +44,7 @@ user1.firstName = "Shiva";
 user1.lastName = "Sai";
 
 user1.getFullName = function(){
-    console.log( this.firstName + ' ' + this.lastName);
+    console.log( "User1::getFullName: ".concat(this.firstName, this.lastName) );
 }
 
 //Direct assignment
@@ -49,10 +53,10 @@ var user2 = {
     lastName: "Sai",
     
     getFirstName: function(){
-        console.log('First Name: ' + this.firstName);
+        console.log('User2::First Name: '.concat(this.firstName) );
     },
     
     getFullName: function(){
-        console.log( 'getFullName -> ' + this.firstName + ' ' + this.lastName);
+        console.log( "User2::getFullName -> ".concat(this.firstName, this.lastName) );
     }
 };
