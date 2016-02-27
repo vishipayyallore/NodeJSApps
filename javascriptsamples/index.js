@@ -4,7 +4,7 @@ var person = {
   occupation: "Software Engineer",
   
   showDetails: function(){
-      alert( this.name + ' ' + this.occupation);
+      console.log( this.name + ' ' + this.occupation);
   }
     
 };

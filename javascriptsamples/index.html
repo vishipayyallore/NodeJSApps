@@ -1,13 +1,39 @@
 <html>
     <head>
         <title>First Program</title>
-        <script type="text/javascript" src="./index.js">
-        </script>
+        <script type="text/javascript" src="./index.js"></script>
+        <script type="text/javascript" src="./objectcreationdemo.js"></script>
     </head>
     <body>
         <h1>Hello World!</h1>
         <script>
             person.showDetails();
+            
+            //Accessing the property using Index/array syntax
+            //Used for dynamic properties OR property names with spaces.
+            var employeeDateOfJoining = 'Data Of Joining';
+            person[employeeDateOfJoining] = '12-Jan-2015';
+            
+            //Over riding the objects method.
+            person.showDetails = function(){
+                console.log( this.name + ' ' + this.occupation + this[employeeDateOfJoining]);
+            }
+            person.showDetails();
+            
+            //Method 1
+            user1.getFullName();
+            
+            //Method 2
+            user2.getFullName();
+            
+            //Method 3
+            var user3 = User('Mathew', 'Philips');
+            user3.getFullName();
+            
+            //Method 4.
+            var employee1 = new Employee('Mohd', 'Waheed');
+            employee1.getFullName();
+            
         </script>
     </body>
 </html>
